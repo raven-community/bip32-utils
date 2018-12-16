@@ -6,19 +6,19 @@
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 A set of utilities for working with BIP32.
-Compatible with bitcoinjs-lib `^2.0.0` and `^3.0.0`.
+Compatible with ravencoinjs-lib `^2.0.0` and `^3.0.0`.
 
 
 ## Example
 
 #### BIP32 Account
 ``` javascript
-var bitcoin = require('bitcoinjs-lib')
+var ravencoin = require('ravencoinjs-lib')
 var bip32utils = require('bip32-utils')
 
 // ...
 
-var m = bitcoin.HDNode.fromSeedHex(seedHex)
+var m = ravencoin.HDNode.fromSeedHex(seedHex)
 var i = m.deriveHardened(0)
 var external = i.derive(0)
 var internal = i.derive(1)
@@ -50,12 +50,12 @@ console.log(account.derive('1QEj2WQD9vxTzsGEvnmLpvzeLVrpzyKkGt', [external, inte
 
 #### BIP32 Chains
 ``` javascript
-var bitcoin = require('bitcoinjs-lib')
+var ravencoin = require('ravencoinjs-lib')
 var bip32utils = require('bip32-utils')
 
 // ...
 
-var hdNode = bitcoin.HDNode.fromSeedHex(seedHex)
+var hdNode = ravencoin.HDNode.fromSeedHex(seedHex)
 var chain = new bip32utils.Chain(hdNode)
 
 for (var k = 0; k < 10; ++k) chain.next()
@@ -73,13 +73,13 @@ console.log(chain.pop())
 #### BIP32 Discovery (manual)
 ``` javascript
 var bip32utils = require('bip32-utils')
-var bitcoin = require('bitcoinjs-lib')
+var ravencoin = require('ravencoinjs-lib')
 var Blockchain = require('cb-blockr')
 
 // ...
 
 var blockchain = new Blockchain('testnet')
-var hdNode = bitcoin.HDNode.fromSeedHex(seedHex)
+var hdNode = ravencoin.HDNode.fromSeedHex(seedHex)
 var chain = bip32utils.Chain(hdNode)
 var GAP_LIMIT = 20
 
