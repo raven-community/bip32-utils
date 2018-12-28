@@ -7,12 +7,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ravencoin-community/bip32-utils.git"
+    "url": "https://github.com/raven-community/bip32-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/ravencoin-community/bip32-utils/issues"
+    "url": "https://github.com/raven-community/bip32-utils/issues"
   },
-  "homepage": "https://github.com/ravencoin-community/bip32-utils",
+  "homepage": "https://github.com/raven-community/bip32-utils",
   "keywords": [
     "bip32-utils",
     "bip32",
@@ -32,14 +32,14 @@
     "unit": "tape test/*.js"
   },
   "devDependencies": {
-    "ravencoinjs-lib": "github:ravencoin-community/ravencoinjs-lib#master",
+    "ravencoinjs-lib": "github:raven-community/ravencoinjs-lib#master",
     "keccak": "^1.3.0",
     "nyc": "*",
     "standard": "*",
     "tape": "*"
   },
   "peerDependencies": {
-    "ravencoinjs-lib": "github:ravencoin-community/ravencoinjs-lib#master"
+    "ravencoinjs-lib": "github:raven-community/ravencoinjs-lib#master"
   },
   "engines": {
     "node": ">=4.0.0"
